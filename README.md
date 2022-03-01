@@ -1,7 +1,1 @@
-# storefront
-# storefront
-# storefront
-# storefront
-# storefront
-# storefront
-# storefront
+Django storefront API
