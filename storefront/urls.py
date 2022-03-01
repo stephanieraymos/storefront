@@ -15,9 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+import debug_toolbar
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('playground/', include('playground.urls')) # Any url paths that start with playground/ should be routed to playground.urls
+    path('playground/', include('playground.urls')), # Any url paths that start with playground/ should be routed to playground.urls
+    path('__debug__/', include(debug_toolbar.urls)),
 ]
 # If request is sent to playground/hello, it knows for any request that starts with playground, to chop off playground and pass the rest (hello) to the url config module in the playground app
